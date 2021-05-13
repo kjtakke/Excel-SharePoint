@@ -21,7 +21,7 @@
 '   sqlTasks = "SELECT * FROM [""List Name""]"
 '   GSPD.addSharePointList(urlC, TaskID, "List Name") = sqlTasks
 '   Call GSPD.SharePointListsToCollection
-'   aslTasks = gslTasks.AllSharePointListData
+'   aslTasks = GSPD.AllSharePointListData
 '
 'End Sub
 
