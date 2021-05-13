@@ -9,7 +9,7 @@
 'Sub Make_Master_Schedule_From_Array()
 '  Dim ms As New MasterSchedule
 '  Dim jAry as Variant
-'  j Ary = .......
+'  jAry = .......
 '  ms.Schedule = jAry
 'End Sub  
   
