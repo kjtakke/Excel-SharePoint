@@ -736,26 +736,8 @@ End Function
                             s_chart_lables = s_chart_lables & "]"
                     
                     'Class Canvas
-                    'HTML_Array(row, column) = HTML_Array(row, column) & "<div style='height:" & chart_height & "' >"
                     HTML_Array(row, column) = HTML_Array(row, column) & "<div>"
                     HTML_Array(row, column) = HTML_Array(row, column) & "<canvas id='" & chart_id & "' style='height:" & chart_height & "; width:" & chart_width & "; " & chart_style & "' class='" & chart_class & "'></canvas>"
-                    
-                    'HTML_Array(row, column) = HTML_Array(row, column) & "<canvas id='" & chart_id & "' style='height:" & chart_height & "; width:" & chart_width & "; " & chart_style & "' class='" & chart_class & "'></canvas>"
-                    
-                    'HTML_Array(row, column) = HTML_Array(row, column) & "<canvas id='" & chart_id & "' style='!important;height: auto !important; " & chart_style & "' height='" & chart_height & "' class='" & chart_class & "'></canvas>"
-                    
-                    
-                    
-                    'HTML_Array(row, column) = HTML_Array(row, column) & "<canvas id='" & chart_id & "' style='" & chart_style & "' class='" & chart_class & "'></canvas>"
-                    
-                    'HTML_Array(row, column) = HTML_Array(row, column) & "<canvas id='" & chart_id & "' style=' " & chart_style & "' class='" & chart_class & "'></canvas>"
-                    
-                    
-                    '!important;height: auto !important;
-                    
-                    'width="400" height="400"
-                    'HTML_Array(row, column) = HTML_Array(row, column) & "<canvas id='" & chart_id & "' class='" & """ b Box """ & "' height=""400"" '></canvas>"
-                    
                     HTML_Array(row, column) = HTML_Array(row, column) & "</div>" & vbNewLine
                                   
                     Select Case True
