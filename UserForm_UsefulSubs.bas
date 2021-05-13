@@ -4,7 +4,7 @@ Sub treeViewLoadValuesFromRange(ctrl As Control, wb As Workbook, ws As String, R
     Dim i As Integer, j As Integer, k As Integer
     Dim rng As range: Set rng = wb.Worksheets(ws).range(RngAddress).CurrentRegion
     Dim treeData As Variant: treeData = rng.Value
-    Dim dimCount As Integer: dimCount = FnS_Generic.arrayDimentionCounter(treeData)
+    Dim dimCount As Integer: dimCount = General_Subs.arrayDimentionCounter(treeData)
     Dim newKayValue As String, parentKayValue As String, valueTreeItem As String
     
     'Load Nodes to TreeView
