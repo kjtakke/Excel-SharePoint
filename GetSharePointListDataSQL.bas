@@ -1,4 +1,4 @@
-'   Const urlC = "https://govteams.sharepoint.com/sites/defenceerpbiateam"
+'   Const urlC = "https://xxxxxx.sharepoint.com/sites/xxxxxxx"
 '   Const TaskID = "228cd9df-226c-4a91-bb2e-7bd35e4dc0f5"
 
 'Sub Get_Data_From_SharePoint_List_Into_An_Array
@@ -7,7 +7,7 @@
 '   Dim aslTasks As Variant
 '
 '   sqlTasks = "SELECT * FROM [""List Name""]"
-'   GSPD.addSharePointList(urlC, TaskID, "BI&A Tasks") = sqlTasks
+'   GSPD.addSharePointList(urlC, TaskID, "List Name") = sqlTasks
 '   Call GSPD.SharePointListsToCollection
 '   aslTasks = gslTasks.AllSharePointListData
 '
