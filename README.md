@@ -1,2 +1,2 @@
 # Excel-SharePoint
-This repository it a guide/reference when using Excel to link with SharePoint Lists
+This repository is a guide/reference when using Excel to link with SharePoint Lists
