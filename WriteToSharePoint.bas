@@ -44,3 +44,48 @@ Sub add_task()
 
 en:
 End Sub
+
+                
+                
+                
+                
+Sub add_Item(fileds As Variant, url As String, listID As String, ListName As String)
+    'Const spURL = "https://xxxxxxx.sharepoint.com/teams/xxxxxxx"
+    'Const spMyListID = "5AA6F12C-79CA-4454-B1B8-9FFB33CF996A"
+    'Const spMyListName = "My List"
+    'Sub AddSharePointListData()
+    '    Dim fields(1 To 2, 1 To 2) As Variant
+    '    fields(1, 1) = "Title"
+    '    fields(2, 1) = "Description"
+    '    fields(1, 2) = "Blad"
+    '    fields(2, 2) = "Blah Blah"
+    '    Call add_Item(fileds, spURL, spMyListID, spMyListName)
+    'End Sub
+
+    Dim cnt As ADODB.Connection: Set cnt = New ADODB.Connection
+    Dim rst As ADODB.Recordset: Set rst = New ADODB.Recordset
+    Dim mySql As String: mySql = "SELECT * FROM [" & ListName & "]"
+    Dim i As Integer
+    On Error GoTo en:
+    
+    With cnt
+      .ConnectionString = _
+      "Provider=Microsoft.ACE.OLEDB.12.0;WSS;IMEX=0;RetrieveIds=Yes;DATABASE=" & url & ";LIST={" & listID & "};"
+      .Open
+    End With
+    
+    rst.Open mySql, cnt, adOpenDynamic, adLockOptimistic
+    
+    rst.AddNew
+      For i = 1 To UBound(fields)
+          rst.fields(fields(i, 1)) = fields(i, 2)
+      Next i
+    rst.Update
+    
+    If CBool(rst.State And adStateOpen) = True Then rst.Close
+    Set rst = Nothing
+    If CBool(cnt.State And adStateOpen) = True Then cnt.Close
+    Set cnt = Nothing
+    
+en:
+End Sub
