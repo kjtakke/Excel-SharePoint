@@ -1,3 +1,5 @@
+Public ButtonName as string
+
 Sub ExampleAddButton()
     Call SetGrid("Sheet1")
     Call addButton("Sheet1", "1", "MyText", 5, 3, 2, 2)
@@ -73,9 +75,9 @@ Sub GetButtonName()
 
     Select Case ObjType
         Case "Button"
-            MsgBox Obj.Name
+            ButtonName = Obj.Name
         Case "Shape"
-            MsgBox Obj.Name
+            ButtonName = Obj.Name
     End Select
 
 End Sub
