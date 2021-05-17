@@ -2,10 +2,10 @@
 '
 'Dim myObject As New Events
 '
-'Sub Test()
+'Sub EventsOn()
 '   Set myObject.SheetEvent = Application
 'End Sub
-'Sub Test2()
+'Sub EventsOff()
 '   Set myObject.SheetEvent = Nothing
 'End Sub
 
