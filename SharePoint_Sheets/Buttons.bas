@@ -54,3 +54,28 @@ Sub addButton(ws As String, id As String, text As String, _
     End With
     
 End Sub
+
+Sub GetButtonName()
+    Dim Obj As Object
+    Dim ObjType As String
+    On Error Resume Next
+
+        Set Obj = ActiveSheet.Buttons(Application.Caller)
+
+        If Err = 0 Then
+            ObjType = "Button"
+        Else
+            Set Obj = ActiveSheet.Shapes(Application.Caller)
+            ObjType = "Shape"
+        End If
+
+    On Error GoTo 0
+
+    Select Case ObjType
+        Case "Button"
+            MsgBox Obj.Name
+        Case "Shape"
+            MsgBox Obj.Name
+    End Select
+
+End Sub
